@@ -39,11 +39,11 @@ python main.py
 ```
 
 ## 👥 Equipe de Desenvolvimento
-- **Aldrey Sandre** [(GitHub)](https://github.com/aldreysandre) - Modelagem de Diagramas UML
+- **Aldrey Sandre** [(GitHub)](https://github.com/aldreysandre) - Modelagem de Diagramas UML; Análise do código; Revisão Final
 - **Arthur Daniel** [(GitHub)](https://github.com/arthurdanielp) - Desenvolvimento e Estruturação do Código
 - **Ismael Farias** [(GitHub)](https://github.com/ismlfq) - Testes de Usabilidade
 - **Jean Lucas** [(GitHub)](https://github.com/jeanlucas) - Modelagem e Organização do Relatório
-- **Renata Galvão** [(GitHub)](https://github.com/RehGal) - Revisão e Documentação
+- **Renata Galvão** [(GitHub)](https://github.com/RehGal) - Revisão e Documentação do artigo; Plano de Apresentação
 - **Wendreo Tauan** [(GitHub)](https://github.com/wendreotauan) - Desenvolvimento das Funcionalidades
 
 ## 📜 Licença
