@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "Usuario": "admin",
+        "Senha": "123",
+        "admin": true
+    },
+    {
+        "id": 2,
+        "Usuario": "usuario1",
+        "Senha": "senha1",
+        "admin": false
+    },
+    {
+        "id": 3,
+        "Usuario": "usuario2",
+        "Senha": "senha2",
+        "admin": false
+    },
+    {
+        "id": 4,
+        "Usuario": "Jean",
+        "Senha": "123",
+        "admin": false
+    },
+    {
+        "id": 5,
+        "Usuario": "j",
+        "Senha": "1",
+        "admin": false
+    }
+]
