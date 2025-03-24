@@ -20,15 +20,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   - `os` (manipulação de arquivos e diretórios)
   - `json` (armazenamento de dados)
 
-## 📷 Capturas de Tela *(Opcional)*
 
-Aqui estão algumas telas do sistema:
-
-![Tela de Login](./screenshots/tela_login.png)  
-*Tela de login do sistema.*  
-
-![Cadastro de Item](./screenshots/tela_cadastro.png)  
-*Cadastro de um item encontrado ou perdido.*  
 
 ## 📦 Como Instalar e Executar
 
