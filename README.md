@@ -1,44 +1,30 @@
-# 📌 Sistema de Achados e Perdidos - UFPA Campus Belém
+# Sistema de Achados e Perdidos
 
-## 📖 Sobre o Projeto
-O **Sistema de Achados e Perdidos** é um projeto acadêmico desenvolvido para facilitar a recuperação de objetos perdidos na Universidade Federal do Pará, Campus Belém. O sistema permite que usuários cadastrem, busquem e gerenciem itens perdidos e encontrados, promovendo uma solução centralizada e eficiente.
+## Descrição
 
-## 🚀 Funcionalidades
-✅ Cadastro de itens perdidos e encontrados.  
-✅ Busca e listagem de itens registrados.  
-✅ Atualização do status de um item (perdido/encontrado).  
-✅ Interface gráfica intuitiva para facilitar o uso.  
-✅ Sistema de autenticação de usuários.  
+Este repositório contém a implementação de um sistema de achados e perdidos, permitindo o cadastro, busca e listagem de itens perdidos e encontrados.
 
-## 🛠️ Tecnologias Utilizadas
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
+## Diagramas UML
 
-- **Linguagem:** Python 3.x  
-- **Interface Gráfica:** Tkinter  
-- **Banco de Dados:** JSON (para armazenamento local)  
-- **Bibliotecas:** 
-  - `os` (manipulação de arquivos e diretórios)
-  - `json` (armazenamento de dados)
+Foram criados diagramas UML para representar os casos de uso e fluxo de atividades do sistema:
+
+- **Diagrama de Caso de Uso:** Representa as interações entre os usuários (User e Admin) e o sistema.
+  ![Diagrama de Caso de Uso](images/UML_caso_uso.png)
 
 
+- **Diagrama de Atividade:** Demonstra o fluxo de operações do sistema, como cadastro e busca de itens.
+  ![Diagrama de Atividade](images/UML_Atividade.png)
 
-## 📦 Como Instalar e Executar
+## Funcionalidades
 
-### 1️⃣ Clone o repositório
-```sh
-git clone https://github.com/seu-usuario/achados-e-perdidos.git
-cd achados-e-perdidos
-```
-
-### 2️⃣ Instale o Python (se ainda não tiver)
-Baixe e instale a versão mais recente do Python em: [https://www.python.org/downloads/](https://www.python.org/downloads/)
-
-### 3️⃣ Execute o programa
-```sh
-python main.py
-```
+- Cadastro de usuários
+- Login de usuários
+- Cadastro de itens
+- Busca de itens
+- Listagem de itens cadastrados
 
 ## 👥 Equipe de Desenvolvimento
+
 - **Aldrey Sandre** [(GitHub)](https://github.com/aldreysandre) - Modelagem de Diagramas UML; Análise do código; Revisão Final
 - **Arthur Daniel** [(GitHub)](https://github.com/arthurdanielp) - Desenvolvimento e Estruturação do Código
 - **Ismael Farias** [(GitHub)](https://github.com/ismlfq) - Testes de Usabilidade
@@ -46,8 +32,27 @@ python main.py
 - **Renata Galvão** [(GitHub)](https://github.com/RehGal) - Revisão e Documentação do artigo; Plano de Apresentação
 - **Wendreo Tauan** [(GitHub)](https://github.com/wendreotauan) - Desenvolvimento das Funcionalidades
 
-## 📜 Licença
-Este projeto é de uso acadêmico e está disponível para fins educacionais e melhorias futuras. Sinta-se à vontade para contribuir!
+## Como Usar
 
-## 🔗 Contato
-Caso tenha dúvidas ou sugestões, entre em contato com os desenvolvedores ou abra uma issue no repositório. 😊
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-achados-perdidos.git
+   ```
+2. Acesse o diretório do projeto:
+   ```bash
+   cd sistema-achados-perdidos
+   ```
+3. Instale as dependências necessárias (caso existam):
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Execute a aplicação:
+   ```bash
+   python app.py
+   ```
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+
