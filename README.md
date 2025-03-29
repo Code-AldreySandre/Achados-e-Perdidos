@@ -9,11 +9,11 @@ Este repositório contém a implementação de um sistema de achados e perdidos,
 Foram criados diagramas UML para representar os casos de uso e fluxo de atividades do sistema:
 
 - **Diagrama de Caso de Uso:** Representa as interações entre os usuários (User e Admin) e o sistema.
-  ![Diagrama de Caso de Uso](images/UML_caso_uso.png)
+  ![Diagrama de Caso de Uso](imagens/UML_caso_uso.png)
 
 
 - **Diagrama de Atividade:** Demonstra o fluxo de operações do sistema, como cadastro e busca de itens.
-  ![Diagrama de Atividade](images/UML_Atividade.png)
+  ![Diagrama de Atividade](imagens/UML_Atividade.png)
 
 ## Funcionalidades
 
