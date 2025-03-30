@@ -67,12 +67,12 @@ O projeto utiliza a linguagem Python e a biblioteca Tkinter para interface gráf
 
 ## Contribuição e Equipe
 O projeto foi desenvolvido em colaboração com a equipe abaixo:
-- **Aldrey Sandre** [(GitHub)](https://github.com/aldreysandre) - Modelagem de Diagramas UML; Análise do Código; Revisão Final
+- **Aldrey Sandre** [(GitHub)](https://github.com/Code-AldreySandre) - Modelagem de Diagramas UML; Análise do Código; Revisão Final
 - **Arthur Daniel** [(GitHub)](https://github.com/arthurdanielp) - Desenvolvimento e Estruturação do Código
 - **Ismael Farias** [(GitHub)](https://github.com/ismlfq) - Testes de Usabilidade
-- **Jean Lucas** [(GitHub)](https://github.com/jeanlucas) - Modelagem e Organização do Relatório
+- **Jean Lucas** [(GitHub)](https://github.com/JeanFerreira) - Modelagem e Organização do Relatório
 - **Renata Galvão** [(GitHub)](https://github.com/RehGal) - Revisão e Documentação do Artigo; Plano de Apresentação
-- **Wendreo Tauan** [(GitHub)](https://github.com/wendreotauan) - Desenvolvimento das Funcionalidades
+- **Wendreo Tauan** [(GitHub)](https://github.com/TauanPastana) - Desenvolvimento das Funcionalidades
 
 ## Orçamento
 O projeto teve um custo estimado de R$ 3.910,00, considerando horas trabalhadas e custo por hora dos membros da equipe.
