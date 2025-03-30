@@ -110,10 +110,17 @@ def show_sistema():
     frame_login.pack_forget()
     frame_sistema.pack(fill="both", expand=True)
 
-def show_cadastro_item():
+def show_cadastro_item():    
     frame_sistema.pack_forget()
     frame_listagem_item.pack_forget()
     frame_cadastro_item.pack(fill="both", expand=True)
+
+def show_cadastro_item1():
+    limpar_campos_item()    
+    frame_sistema.pack_forget()
+    frame_listagem_item.pack_forget()
+    frame_cadastro_item.pack(fill="both", expand=True)
+    
 
 def show_listagem_item():
     frame_sistema.pack_forget()
@@ -220,6 +227,22 @@ def limpar_campos_item():
     entry_status.delete(0, tk.END)
     entry_numero.delete(0, tk.END)
 
+    # Restaura os placeholders
+    on_focus_in_user_nome_pessoa(None)  # Restaura o placeholder do nome da pessoa
+    on_focus_in_nome_item(None)    # Restaura o placeholder do nome do item
+    on_focus_in_categoria(None)    # Restaura o placeholder da categoria
+    on_focus_in_local(None)        # Restaura o placeholder do local
+    on_focus_in_data(None)         # Restaura o placeholder da data
+    on_focus_in_status(None)       # Restaura o placeholder do status
+    on_focus_in_contato(None)      # Restaura o placeholder do contato
+    on_focus_out_nome_pessoa(None)  # Restaura o placeholder do nome da pessoa
+    on_focus_out_nome_item(None)    # Restaura o placeholder do nome do item
+    on_focus_out_categoria(None)    # Restaura o placeholder da categoria
+    on_focus_out_local(None)        # Restaura o placeholder do local
+    on_focus_out_data(None)         # Restaura o placeholder da data
+    on_focus_out_status(None)       # Restaura o placeholder do status
+    on_focus_out_contato(None)      # Restaura o placeholder do contato
+
 def listar_itens():
     treeview_itens.delete(0, tk.END)
     itens = carregar_itens()
@@ -271,10 +294,12 @@ def selecionar_item():
                 break
         
         # Mostra a tela de cadastro para edição
+
         show_cadastro_item()
     
     except IndexError:
         messagebox.showwarning("Aviso", "Selecione um item para editar.")
+
 
 def excluir_item():
     if not (current_user and current_user.get('admin')):
@@ -288,6 +313,7 @@ def excluir_item():
         
         # Extrai o ID do item
         item_id = int(item_values[0])
+        
         
         # Confirmação de exclusão
         resposta = messagebox.askyesno("Confirmação", "Tem certeza que deseja excluir este item?")
@@ -307,6 +333,7 @@ def excluir_item():
     
     except IndexError:
         messagebox.showwarning("Aviso", "Selecione um item para excluir.")
+    print("Valores do item selecionado:", item_values)
 
 
 # Interface
@@ -345,7 +372,7 @@ def on_focus_in_user(event):
 def on_focus_out_user(event):
     if entry_user_login.get() == "":
         entry_user_login.insert(0,"Digite seu usuário")
-        entry_user_login.config(fg="gray")
+        entry_user_login.config(fg="black")
 
 #placeholder para os campo senha do login
 def on_focus_in_pass(event):
@@ -356,7 +383,7 @@ def on_focus_in_pass(event):
 def on_focus_out_pass(event):
     if entry_pass_login.get() == "":
         entry_pass_login.insert(0,"Digite sua senha")
-        entry_pass_login.config(fg="gray")
+        entry_pass_login.config(fg="black")
 
 #placeholder para os campo usuario do cadastro
 def on_focus_in_user_reg(event):
@@ -367,7 +394,7 @@ def on_focus_in_user_reg(event):
 def on_focus_out_user_reg(event):
     if entry_user_reg.get() == "":
         entry_user_reg.insert(0,"Digite seu usuário")
-        entry_user_reg.config(fg="gray")
+        entry_user_reg.config(fg="black")
 
 #placeholder para os campo senha do cadastro
 def on_focus_in_pass_reg(event):
@@ -378,7 +405,7 @@ def on_focus_in_pass_reg(event):
 def on_focus_out_pass_reg(event):
     if entry_pass_reg.get() == "":
         entry_pass_reg.insert(0,"Digite sua senha")
-        entry_pass_reg.config(fg="gray")
+        entry_pass_reg.config(fg="black")
 
 
 # Frames
@@ -473,7 +500,7 @@ btn_voltar_login.bind("<Leave>", lambda e: btn_voltar_login.config(bg=COR_BOTAO)
 # Sistema Principal
 tk.Label(container_sistema, text="Sistema de Achados e Perdidos", font=("Arial", 16, "bold"), bg=COR_FUNDO, fg=COR_TEXTO).pack(pady=20)
 
-btn_cad_item = tk.Button(container_sistema, **ESTILO_BOTAO, text="Cadastrar Item", font=("Arial", 10, "bold"), command=show_cadastro_item)
+btn_cad_item = tk.Button(container_sistema, **ESTILO_BOTAO, text="Cadastrar Item", font=("Arial", 10, "bold"), command=show_cadastro_item1)
 btn_cad_item.pack(pady=10, ipady=3, ipadx=20)
 
 btn_cad_item.bind("<Enter>", lambda e: btn_cad_item.config(bg=COR_HOVER))
@@ -500,7 +527,7 @@ def on_focus_in_user_nome_pessoa(event):
 def on_focus_out_nome_pessoa(event):
     if entry_nome_pessoa.get() == "":
         entry_nome_pessoa.insert(0,"Digite seu nome")
-        entry_nome_pessoa.config(fg="gray")
+        entry_nome_pessoa.config(fg="black")
 
 #placeholder para os campo senha do login
 def on_focus_in_nome_item(event):
@@ -511,7 +538,7 @@ def on_focus_in_nome_item(event):
 def on_focus_out_nome_item(event):
     if entry_nome.get() == "":
         entry_nome.insert(0,"Digite o nome do item")
-        entry_nome.config(fg="gray")
+        entry_nome.config(fg="black")
 
 #placeholder para o campo categoria
 def on_focus_in_categoria(event):
@@ -522,7 +549,7 @@ def on_focus_in_categoria(event):
 def on_focus_out_categoria(event):
     if entry_categoria.get() == "":
         entry_categoria.insert(0,"Digite a categoria do item")
-        entry_categoria.config(fg="gray")
+        entry_categoria.config(fg="black")
 
 
 #placeholder para o campo local
@@ -534,7 +561,7 @@ def on_focus_in_local(event):
 def on_focus_out_local(event):
     if entry_local.get() == "":
         entry_local.insert(0,"Digite o local (encontrado/perdido)")
-        entry_local.config(fg="gray")
+        entry_local.config(fg="black")
 
 #placeholder para o campo data
 def on_focus_in_data(event):
@@ -545,7 +572,7 @@ def on_focus_in_data(event):
 def on_focus_out_data(event):
     if entry_data.get() == "":
         entry_data.insert(0,"Data do dia (encontrado/perdido)")
-        entry_data.config(fg="gray")
+        entry_data.config(fg="black")
 
 #placeholder para o campo status
 def on_focus_in_status(event):
@@ -556,7 +583,7 @@ def on_focus_in_status(event):
 def on_focus_out_status(event):
     if entry_status.get() == "":
         entry_status.insert(0,"Status (encontrado/perdido)")
-        entry_status.config(fg="gray")
+        entry_status.config(fg="black")
 
 
 #placeholder para o campo contato
@@ -568,7 +595,8 @@ def on_focus_in_contato(event):
 def on_focus_out_contato(event):
     if entry_numero.get() == "":
         entry_numero.insert(0,"Digite seu contato")
-        entry_numero.config(fg="gray")
+        entry_numero.config(fg="black")
+
 
 # Cadastro de Item
 tk.Label(container_cadastro_item, text="Cadastro de Item", font=("Arial", 16, "bold"), bg=COR_FUNDO, fg=COR_TEXTO).pack(pady=20)
@@ -641,8 +669,6 @@ btn_voltar_cad.grid(row=0, column=1, padx=10, ipady=3, ipadx=10)
 btn_voltar_cad.bind("<Enter>", lambda e: btn_voltar_cad.config(bg=COR_HOVER))
 btn_voltar_cad.bind("<Leave>", lambda e: btn_voltar_cad.config(bg=COR_BOTAO))
 
-
-# ... (restante do código anterior)
 
 # Listagem de Itens (SEÇÃO MODIFICADA)
 tk.Label(container_listagem_item, text="Listagem de Itens", font=("Arial", 16, "bold"), bg=COR_FUNDO, fg=COR_TEXTO).pack(pady=20)
@@ -723,7 +749,7 @@ frame_botoes.pack(pady=15)
 
 # Botões com espaçamento maior
 btn_editar = tk.Button(frame_botoes, **ESTILO_BOTAO, text="Editar", font=("Arial", 10, "bold"), command=selecionar_item)
-btn_editar.pack(side=tk.LEFT, padx=20, ipady=3)
+btn_editar.pack(side="left", padx=20, ipady=3)
 btn_editar.bind("<Enter>", lambda e: btn_editar.config(bg=COR_HOVER))
 btn_editar.bind("<Leave>", lambda e: btn_editar.config(bg=COR_BOTAO))
 
